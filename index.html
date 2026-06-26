@@ -1557,152 +1557,108 @@ section + section { padding-top: 0; }
 
 
 /* ─── Thank You state — Premium Minimal ─── */
-.form-success.thankyou-state .su-thankyou-inner {
+.su-thankyou-inner {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
   width: 100%;
-  padding: 8px 0;
+  padding: 4px 0;
 }
-.form-success.thankyou-state .su-thankyou-top {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  width: 100%;
-}
-.form-success.thankyou-state .su-thankyou-icon {
-  width: 52px;
-  height: 52px;
+
+/* Badge — top left checkmark in warm circle */
+.su-badge {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: var(--cream-dark);
+  background: #EDE8DD;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-}
-.form-success.thankyou-state .su-thankyou-icon i {
-  font-size: 1.15rem;
   color: var(--sage);
+  margin: 0 auto 2px;
 }
-.form-success.thankyou-state .su-thankyou-top-text {
-  text-align: left;
-  flex: 1;
+
+/* Heading row — Thank you + decorative sprig */
+.su-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
 }
-.form-success.thankyou-state .su-thankyou-top-text h4 {
+.su-heading-row h4 {
   font-family: var(--font-script);
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 600;
   color: var(--sage);
-  margin-bottom: 0;
-  letter-spacing: 0.01em;
+  margin: 0;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
 }
-.form-success.thankyou-state .su-thankyou-sub {
+.su-sprig {
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  color: var(--sage);
+  opacity: 0.6;
+  transform: rotate(-15deg);
+  margin-top: 3px;
+}
+
+/* Subhead — bold sans */
+.su-subhead {
   font-family: var(--font-sans);
   font-size: 0.9375rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-top: 2px;
+  margin: 0;
+  line-height: 1.5;
+  text-align: center;
 }
 
-.form-success.thankyou-state .su-text {
-  font-size: 0.9375rem;
+/* Body text */
+.su-text {
+  font-size: 0.875rem;
   color: var(--text-secondary);
   line-height: 1.7;
-  text-align: left;
+  text-align: center;
   width: 100%;
   margin: 0;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.form-success.thankyou-state .su-divider {
-  margin: 6px 0 4px;
-  max-width: 100%;
+
+/* Divider — clean thin line */
+.su-divider {
+  height: 1px;
+  background: #E0DBD0;
+  width: 100%;
+  margin: 6px 0 2px;
 }
-.form-success.thankyou-state .su-thankyou-bottom {
+
+/* Footer row */
+.su-footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  gap: 6px;
   width: 100%;
 }
-.form-success.thankyou-state .su-script {
-  font-size: 1.05rem;
+.su-script {
+  font-family: var(--font-script);
+  font-size: 1rem;
   color: var(--sage);
-  margin-bottom: 0;
+  margin: 0;
+  opacity: 0.9;
+}
+.su-heart {
+  flex-shrink: 0;
+  opacity: 0.55;
 }
 
 
-
-/* ─── One-time Activation (site owner only) ─── */
-.form-success.activate-state .su-activate-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  padding: 20px 0;
-}
-.form-success.activate-state .su-activate-icon {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #D4A853 0%, #B8913A 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 1.6rem;
-  box-shadow: 0 8px 32px rgba(212,168,83,0.3);
-}
-.form-success.activate-state h4 {
-  font-family: var(--font-serif);
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  letter-spacing: -0.01em;
-}
-.form-success.activate-state .su-activate-desc {
-  font-size: 0.9375rem;
-  color: var(--text-secondary);
-  max-width: 360px;
-  line-height: 1.6;
-}
-.form-success.activate-state .su-activate-steps {
-  background: var(--cream);
-  border-radius: var(--radius-sm);
-  padding: 16px 20px;
-  max-width: 380px;
-  text-align: left;
-  width: 100%;
-}
-.form-success.activate-state .su-activate-steps p {
-  font-size: 0.82rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 8px;
-}
-.form-success.activate-state .su-activate-steps p:last-child {
-  margin-bottom: 0;
-}
-.form-success.activate-state .su-activate-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 28px;
-  background: var(--sage);
-  color: var(--white);
-  border: none;
-  border-radius: var(--radius-full);
-  font-family: var(--font-sans);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.form-success.activate-state .su-activate-btn:hover {
-  background: #3D5A40;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(79,107,82,0.3);
-}
-
-/* ─── Staggered animation layers ─── */
+/* ─── Thank You state ─── */
 .form-success .su-stagger { opacity: 0; animation: su-fade-up 0.5s ease forwards; }
 @keyframes su-fade-up {
   0% { opacity: 0; transform: translateY(10px); }
@@ -2370,44 +2326,36 @@ section + section { padding-top: 0; }
           </button>
         </form>
 
-          <!-- Premium Success — Two States -->
+          <!-- Premium Success — Thank You -->
           <div class="form-success" id="formSuccess">
-            <!-- State A: One-time activation (first submit only) -->
-            <div class="activate-state" id="suActivate" style="display:none;">
-              <div class="su-activate-card">
-                <div class="su-activate-icon"><i class="fas fa-envelope-open-text"></i></div>
-                <h4>Almost There!</h4>
-                <p class="su-activate-desc">One last step — activate the form so submissions reach you.</p>
-                <div class="su-activate-steps">
-                  <p>📬 Check <strong>sunleafdesigners@gmail.com</strong> inbox (or Spam)</p>
-                  <p>✅ Find the email from <strong>FormSubmit</strong> and click <strong>Confirm</strong></p>
-                </div>
-                <button type="button" class="su-activate-btn" onclick="handleActivationDone()">
-                  I've Confirmed — Done <i class="fas fa-arrow-right"></i>
-                </button>
-              </div>
-            </div>
-
-            <!-- State B: Thank You (always after activation, or for visitors) -->
+            <!-- Thank You (always shown after successful submit) -->
             <div class="thankyou-state" id="suThankYou" style="display:none;">
               <div class="su-thankyou-inner">
-                <div class="su-thankyou-top">
-                  <div class="su-thankyou-icon su-stagger">
-                    <i class="fas fa-leaf"></i>
-                  </div>
-                  <div class="su-thankyou-top-text">
-                    <h4 class="su-stagger">Thank you!</h4>
-                    <p class="su-stagger su-thankyou-sub">Your message has been sent successfully.</p>
-                  </div>
+
+                <!-- Badge icon top-left -->
+                <div class="su-badge su-stagger">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                 </div>
+
+                <!-- Heading row with decorative sprig -->
+                <div class="su-heading-row su-stagger">
+                  <h4>Thank you!</h4>
+                  <i class="fas fa-leaf su-sprig"></i>
+                </div>
+
+                <p class="su-subhead su-stagger">Your message has been sent successfully.</p>
+
                 <p class="su-text su-stagger">
                   We've received your enquiry and our team will get back to you as soon as possible. We appreciate you reaching out to us!
                 </p>
-                <div class="su-divider su-stagger"><i class="fas fa-leaf"></i></div>
-                <div class="su-thankyou-bottom su-stagger">
+
+                <div class="su-divider su-stagger"></div>
+
+                <div class="su-footer su-stagger">
                   <span class="su-script">Let's build something beautiful together.</span>
-                  <span style="color:var(--sage);font-size:0.85rem;opacity:0.5;margin-left:6px;">♥</span>
+                  <svg class="su-heart" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                 </div>
+
               </div>
             </div>
           </div>
@@ -2781,34 +2729,23 @@ window.addEventListener('resize', () => {
 const FORM_EMAIL = 'sunleafdesigners@gmail.com';
 const FORM_AJAX_URL = 'https://formsubmit.co/ajax/' + FORM_EMAIL;
 
-function showSuccessState(state) {
+function showSuccessState() {
   const overlay = document.getElementById('formSuccess');
   const form = document.getElementById('contactForm');
-  const activate = document.getElementById('suActivate');
   const thankyou = document.getElementById('suThankYou');
   form.style.display = 'none';
-  overlay.classList.remove('show', 'anim-in', 'thankyou-state', 'activate-state');
-  activate.style.display = 'none';
-  thankyou.style.display = 'none';
-
-  if (state === 'activate') {
-    overlay.classList.add('activate-state');
-    activate.style.display = '';
-  } else {
-    overlay.classList.add('thankyou-state');
-    thankyou.style.display = '';
-  }
-
+  overlay.classList.remove('show', 'anim-in', 'thankyou-state');
+  thankyou.style.display = '';
   overlay.classList.add('show');
   void overlay.offsetWidth;
   overlay.classList.add('anim-in');
+  console.log('✅ Message sent successfully via FormSubmit');
 }
 
 function resetFormAfterSubmit() {
   const overlay = document.getElementById('formSuccess');
   const form = document.getElementById('contactForm');
-  overlay.classList.remove('show', 'anim-in', 'thankyou-state', 'activate-state');
-  document.getElementById('suActivate').style.display = 'none';
+  overlay.classList.remove('show', 'anim-in', 'thankyou-state');
   document.getElementById('suThankYou').style.display = 'none';
   form.reset();
   form.style.display = '';
@@ -2817,12 +2754,6 @@ function resetFormAfterSubmit() {
     btn.disabled = false;
     btn.innerHTML = 'Send Message <i class="fas fa-arrow-right"></i>';
   }
-}
-
-function handleActivationDone() {
-  localStorage.setItem('sunleaf_activated', 'true');
-  resetFormAfterSubmit();
-  showToast('✅ All set! Your form is now live.');
 }
 
 function showToast(msg) {
@@ -2887,12 +2818,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const result = await response.json();
 
       if (result.success) {
-        // First time? Show activation to owner. After that, just thank you.
-        if (localStorage.getItem('sunleaf_activated')) {
-          showSuccessState('thankyou');
-        } else {
-          showSuccessState('activate');
-        }
+        showSuccessState();
       } else {
         throw new Error(result.message || 'Form submission failed');
       }
