@@ -1,0 +1,9 @@
+# OS files
+Thumbs.db
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# No need to ignore the video - it's the site's asset
