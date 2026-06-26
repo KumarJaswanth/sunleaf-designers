@@ -1555,114 +1555,6 @@ section + section { padding-top: 0; }
   100% { opacity: 1; transform: scale(1) translateY(0); }
 }
 
-/* ─── Shared elements ─── */
-.form-success .su-icon-wrap {
-  position: relative;
-  width: 88px;
-  height: 88px;
-  margin: 0 auto 22px;
-}
-.form-success .su-ring {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  border: 2px solid var(--sage-pale);
-  animation: su-pulse 2.8s ease-in-out infinite;
-}
-.form-success .su-ring:nth-child(2) {
-  animation-delay: 0.5s;
-  border-color: var(--sage);
-  opacity: 0.25;
-}
-@keyframes su-pulse {
-  0%, 100% { transform: scale(1); opacity: 0.5; }
-  50% { transform: scale(1.22); opacity: 0; }
-}
-.form-success .su-icon {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-  margin: 4px auto 0;
-}
-.form-success .su-icon i {
-  font-size: 1.8rem;
-  animation: su-bounce 0.6s 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
-}
-@keyframes su-bounce {
-  0% { transform: scale(0); }
-  100% { transform: scale(1); }
-}
-
-.form-success h4 {
-  font-family: var(--font-serif);
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 4px;
-  letter-spacing: -0.01em;
-}
-.form-success .su-script {
-  font-family: var(--font-script);
-  font-size: 1.2rem;
-  color: var(--sage);
-  margin-bottom: 8px;
-}
-.form-success .su-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin: 10px auto 18px;
-  width: 100%;
-  max-width: 200px;
-}
-.form-success .su-divider::before,
-.form-success .su-divider::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--sage-pale);
-}
-.form-success .su-divider i {
-  font-size: 0.8rem;
-  color: var(--sage);
-  opacity: 0.4;
-}
-.form-success .su-text {
-  font-size: 0.9375rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
-  max-width: 400px;
-  margin: 0 auto;
-}
-.form-success .su-text strong {
-  color: var(--text-primary);
-  font-weight: 600;
-}
-.form-success .su-badge-group {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 18px 0 22px;
-}
-.form-success .su-badge-group span {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-}
-.form-success .su-badge-group span i {
-  color: var(--sage);
-  font-size: 0.65rem;
-}
 
 /* ─── Thank You state — Premium Minimal ─── */
 .form-success.thankyou-state .su-thankyou-inner {
@@ -1711,6 +1603,7 @@ section + section { padding-top: 0; }
   color: var(--text-primary);
   margin-top: 2px;
 }
+
 .form-success.thankyou-state .su-text {
   font-size: 0.9375rem;
   color: var(--text-secondary);
@@ -1736,65 +1629,66 @@ section + section { padding-top: 0; }
   margin-bottom: 0;
 }
 
-/* ─── Activation state (amber/warm gradient icon) ─── */
-.form-success.activate-state .su-icon {
+
+
+/* ─── One-time Activation (site owner only) ─── */
+.form-success.activate-state .su-activate-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+}
+.form-success.activate-state .su-activate-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
   background: linear-gradient(135deg, #D4A853 0%, #B8913A 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.6rem;
   box-shadow: 0 8px 32px rgba(212,168,83,0.3);
 }
-.form-success.activate-state .su-icon i { color: var(--white); }
 .form-success.activate-state h4 {
-  font-size: 1.5rem;
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
 }
-.form-success.activate-state .su-script {
-  font-size: 1rem;
-  color: #B8913A;
+.form-success.activate-state .su-activate-desc {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  max-width: 360px;
+  line-height: 1.6;
 }
-.form-success.activate-state .su-email-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(212,168,83,0.1);
-  border: 1px solid rgba(212,168,83,0.25);
-  border-radius: var(--radius-full);
-  padding: 8px 20px;
-  margin: 10px auto 12px;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: #8B6F2E;
-}
-.form-success.activate-state .su-email-badge i {
-  font-size: 0.8rem;
-  color: #D4A853;
-}
-.form-success.activate-state .su-instructions {
+.form-success.activate-state .su-activate-steps {
   background: var(--cream);
   border-radius: var(--radius-sm);
   padding: 16px 20px;
-  margin: 12px auto 18px;
   max-width: 380px;
   text-align: left;
+  width: 100%;
 }
-.form-success.activate-state .su-instructions p {
-  font-size: 0.8rem;
+.form-success.activate-state .su-activate-steps p {
+  font-size: 0.82rem;
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 8px;
 }
-.form-success.activate-state .su-instructions p:last-child {
+.form-success.activate-state .su-activate-steps p:last-child {
   margin-bottom: 0;
 }
-.form-success.activate-state .su-instructions strong {
-  color: var(--text-primary);
-  font-weight: 600;
-}
-.form-success.activate-state .su-btn {
+.form-success.activate-state .su-activate-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 12px 28px;
-  background: transparent;
-  color: #8B6F2E;
-  border: 1.5px solid rgba(212,168,83,0.4);
+  background: var(--sage);
+  color: var(--white);
+  border: none;
   border-radius: var(--radius-full);
   font-family: var(--font-sans);
   font-size: 0.8125rem;
@@ -1802,9 +1696,10 @@ section + section { padding-top: 0; }
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.form-success.activate-state .su-btn:hover {
-  background: rgba(212,168,83,0.08);
-  border-color: #D4A853;
+.form-success.activate-state .su-activate-btn:hover {
+  background: #3D5A40;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(79,107,82,0.3);
 }
 
 /* ─── Staggered animation layers ─── */
@@ -2477,37 +2372,23 @@ section + section { padding-top: 0; }
 
           <!-- Premium Success — Two States -->
           <div class="form-success" id="formSuccess">
-            <!-- State A: Activation (first-time) -->
-            <div class="activate-state" id="suActivate">
-              <div class="su-icon-wrap su-stagger">
-                <div class="su-ring"></div>
-                <div class="su-ring"></div>
-                <div class="su-icon">
-                  <i class="fas fa-envelope-open-text"></i>
+            <!-- State A: One-time activation (first submit only) -->
+            <div class="activate-state" id="suActivate" style="display:none;">
+              <div class="su-activate-card">
+                <div class="su-activate-icon"><i class="fas fa-envelope-open-text"></i></div>
+                <h4>Almost There!</h4>
+                <p class="su-activate-desc">One last step — activate the form so submissions reach you.</p>
+                <div class="su-activate-steps">
+                  <p>📬 Check <strong>sunleafdesigners@gmail.com</strong> inbox (or Spam)</p>
+                  <p>✅ Find the email from <strong>FormSubmit</strong> and click <strong>Confirm</strong></p>
                 </div>
+                <button type="button" class="su-activate-btn" onclick="handleActivationDone()">
+                  I've Confirmed — Done <i class="fas fa-arrow-right"></i>
+                </button>
               </div>
-              <h4 class="su-stagger">Almost There!</h4>
-              <div class="su-script su-stagger">One last step to activate</div>
-              <div class="su-divider su-stagger"><i class="fas fa-leaf"></i></div>
-              <p class="su-text su-stagger">
-                We received your message. To start receiving submissions, 
-                please check <strong>sunleafdesigners@gmail.com</strong> 
-                for the activation link from FormSubmit and click it.
-              </p>
-              <div class="su-email-badge su-stagger">
-                <i class="fas fa-envelope"></i> Activation sent to sunleafdesigners@gmail.com
-              </div>
-              <div class="su-instructions su-stagger">
-                <p><strong>📬 Step 1:</strong> Open <strong>sunleafdesigners@gmail.com</strong> inbox (or check Spam).</p>
-                <p><strong>✅ Step 2:</strong> Find the email from <strong>FormSubmit</strong> and click <strong>Confirm / Verify</strong>.</p>
-                <p><strong>🚀 Step 3:</strong> Come back and submit again — future messages will arrive straight to your inbox!</p>
-              </div>
-              <button type="button" class="su-btn su-stagger" onclick="handleActivationDone()">
-                I've Verified — Continue <i class="fas fa-arrow-right"></i>
-              </button>
             </div>
 
-            <!-- State B: Thank You (after activation) -->
+            <!-- State B: Thank You (always after activation, or for visitors) -->
             <div class="thankyou-state" id="suThankYou" style="display:none;">
               <div class="su-thankyou-inner">
                 <div class="su-thankyou-top">
@@ -2903,17 +2784,19 @@ const FORM_AJAX_URL = 'https://formsubmit.co/ajax/' + FORM_EMAIL;
 function showSuccessState(state) {
   const overlay = document.getElementById('formSuccess');
   const form = document.getElementById('contactForm');
+  const activate = document.getElementById('suActivate');
+  const thankyou = document.getElementById('suThankYou');
   form.style.display = 'none';
-  overlay.classList.remove('anim-in', 'thankyou-state', 'activate-state');
-  document.getElementById('suActivate').style.display = 'none';
-  document.getElementById('suThankYou').style.display = 'none';
+  overlay.classList.remove('show', 'anim-in', 'thankyou-state', 'activate-state');
+  activate.style.display = 'none';
+  thankyou.style.display = 'none';
 
   if (state === 'activate') {
     overlay.classList.add('activate-state');
-    document.getElementById('suActivate').style.display = '';
+    activate.style.display = '';
   } else {
     overlay.classList.add('thankyou-state');
-    document.getElementById('suThankYou').style.display = '';
+    thankyou.style.display = '';
   }
 
   overlay.classList.add('show');
@@ -2929,7 +2812,6 @@ function resetFormAfterSubmit() {
   document.getElementById('suThankYou').style.display = 'none';
   form.reset();
   form.style.display = '';
-  // Re-enable button
   const btn = form.querySelector('button[type="submit"]');
   if (btn) {
     btn.disabled = false;
@@ -2940,7 +2822,7 @@ function resetFormAfterSubmit() {
 function handleActivationDone() {
   localStorage.setItem('sunleaf_activated', 'true');
   resetFormAfterSubmit();
-  showToast('✅ Activation saved! Form is now live.');
+  showToast('✅ All set! Your form is now live.');
 }
 
 function showToast(msg) {
@@ -3005,8 +2887,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const result = await response.json();
 
       if (result.success) {
-        // Submission reached FormSubmit
-        // If already activated, show thank you. Otherwise show activation.
+        // First time? Show activation to owner. After that, just thank you.
         if (localStorage.getItem('sunleaf_activated')) {
           showSuccessState('thankyou');
         } else {
