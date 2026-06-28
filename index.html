@@ -6,6 +6,57 @@
   <title>Sunleaf Designers — Award-Winning Web Design</title>
   <meta name="description" content="Premium web design studio crafting cinematic digital experiences for local businesses. Awwwards-quality websites that drive growth." />
   <link rel="icon" type="image/png" href="Assets/sunleaf-logo.png" />
+  <link rel="apple-touch-icon" href="Assets/sunleaf-logo.png" />
+  <link rel="canonical" href="https://sunleaf-designers.vercel.app/" />
+  <meta name="theme-color" content="#F8F6F1" />
+  <meta name="author" content="Sunleaf Designers" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sunleaf Designers — Award-Winning Web Design Studio" />
+  <meta property="og:description" content="Premium web design studio crafting cinematic digital experiences for local businesses. Awwwards-quality websites that drive growth." />
+  <meta property="og:url" content="https://sunleaf-designers.vercel.app/" />
+  <meta property="og:site_name" content="Sunleaf Designers" />
+  <meta property="og:image" content="https://sunleaf-designers.vercel.app/Assets/sunleaf-logo.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sunleaf Designers — Award-Winning Web Design Studio" />
+  <meta name="twitter:description" content="Premium web design studio crafting cinematic digital experiences for local businesses. Awwwards-quality websites that drive growth." />
+  <meta name="twitter:image" content="https://sunleaf-designers.vercel.app/Assets/sunleaf-logo.png" />
+
+  <!-- Preconnect & Performance -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="https://unpkg.com" />
+  <link rel="dns-prefetch" href="https://images.unsplash.com" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Sunleaf Designers",
+    "description": "Premium web design studio crafting cinematic digital experiences for local businesses. Awwwards-quality websites that drive growth.",
+    "url": "https://sunleaf-designers.vercel.app/",
+    "logo": "https://sunleaf-designers.vercel.app/Assets/sunleaf-logo.png",
+    "email": "sunleafdesigners@gmail.com",
+    "telephone": "+91 80749 12194",
+    "areaServed": "Worldwide",
+    "priceRange": "$$",
+    "sameAs": [
+      "https://facebook.com/sunleafdesigners",
+      "https://instagram.com/sunleafdesigners",
+      "https://linkedin.com/company/sunleafdesigners",
+      "https://youtube.com/@sunleafdesigners"
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -1853,7 +1904,7 @@ section + section { padding-top: 0; }
 <body>
 
 <!-- ═══════════════ MOBILE MENU ═══════════════ -->
-<div class="mobile-menu" id="mobileMenu">
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <a href="#work" onclick="toggleMobileMenu()">Work</a>
   <a href="#services" onclick="toggleMobileMenu()">Services</a>
   <a href="#process" onclick="toggleMobileMenu()">Process</a>
@@ -1863,7 +1914,7 @@ section + section { padding-top: 0; }
 </div>
 
 <!-- ═══════════════ NAV ═══════════════ -->
-<nav class="nav" id="nav">
+<nav class="nav" id="nav" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="javascript:void(0)" class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});setTimeout(function(){document.getElementById('nav').classList.remove('scrolled')},100);return false;">
       <img src="Assets/sunleaf-logo.png" alt="Sunleaf Designers" class="nav-logo-icon-img" style="width:38px;height:38px;object-fit:contain;flex-shrink:0;" />
@@ -1879,13 +1930,14 @@ section + section { padding-top: 0; }
       <a href="#faq">FAQ</a>
       <a href="#contact" class="nav-cta">Let's Talk</a>
     </div>
-    <div class="nav-hamburger" onclick="toggleMobileMenu()">
-      <span></span><span></span><span></span>
+    <div class="nav-hamburger" onclick="toggleMobileMenu()" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
     </div>
   </div>
 </nav>
 
 <!-- ═══════════════ HERO ═══════════════ -->
+<main>
 <section class="hero" id="hero">
   <video class="hero-video" id="heroVideo" autoplay muted loop playsinline>
     <source src="Assets/hero-bg.mp4" type="video/mp4" />
@@ -2375,7 +2427,7 @@ section + section { padding-top: 0; }
 
     <div class="faq-list reveal">
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
           Why does my business need a website if I already use Instagram or WhatsApp?
           <i class="fas fa-plus"></i>
         </button>
@@ -2390,7 +2442,7 @@ section + section { padding-top: 0; }
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
           How much does a professional website cost?
           <i class="fas fa-plus"></i>
         </button>
@@ -2405,7 +2457,7 @@ section + section { padding-top: 0; }
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
           How long does it take to build a website?
           <i class="fas fa-plus"></i>
         </button>
@@ -2419,7 +2471,7 @@ section + section { padding-top: 0; }
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
           Will my website work on mobile phones?
           <i class="fas fa-plus"></i>
         </button>
@@ -2433,7 +2485,7 @@ section + section { padding-top: 0; }
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
           Can you redesign my existing website?
           <i class="fas fa-plus"></i>
         </button>
@@ -2459,8 +2511,9 @@ section + section { padding-top: 0; }
   </a>
 </div>
 
+</main>
 <!-- ═══════════════ FOOTER ═══════════════ -->
-<footer class="site-footer">
+<footer class="site-footer" aria-label="Site footer">
   <div class="footer-inner">
     <a href="javascript:void(0)" class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});setTimeout(function(){document.getElementById('nav').classList.remove('scrolled')},100);return false;">
       <img src="Assets/sunleaf-logo.png" alt="Sunleaf Designers" style="width:34px;height:34px;object-fit:contain;flex-shrink:0;" />
@@ -2664,10 +2717,13 @@ function toggleFaq(btn) {
   // Close all
   document.querySelectorAll('.faq-item.open').forEach((el) => {
     el.classList.remove('open');
+    const b = el.querySelector('.faq-question');
+    if (b) b.setAttribute('aria-expanded', 'false');
   });
 
   if (!isOpen) {
     item.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
   }
 }
 window.toggleFaq = toggleFaq;
@@ -2680,7 +2736,11 @@ function toggleMobileMenu() {
   const ham = document.querySelector('.nav-hamburger');
   const isOpen = menu.classList.toggle('open');
   document.body.style.overflow = isOpen ? 'hidden' : '';
-  if (ham) ham.classList.toggle('active', isOpen);
+  menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+  if (ham) {
+    ham.classList.toggle('active', isOpen);
+    ham.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  }
 }
 window.toggleMobileMenu = toggleMobileMenu;
 
